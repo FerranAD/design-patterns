@@ -4,27 +4,32 @@ import exceptions.NoDataAvailableException;
 import weather.Observer;
 import weather.WeatherData;
 
-public class CurrentConditionDisplay implements DisplayElement, Observer {
+public class HeatIndexDisplay implements DisplayElement, Observer {
+    private final String HEADER = "Heat index is: ";
     private final WeatherData weatherData;
-    private final String HEADER = "Current conditions: temperature: %.1f humidity: %.1f";
     private Double temperature;
     private Double humidity;
 
-    public CurrentConditionDisplay(WeatherData weatherData) {
+    public HeatIndexDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
     public String display() {
-        return displayIfAvailableData();
+        return displayMessage();
     }
 
-    private String displayIfAvailableData() {
-        if (temperature == null || humidity == null) {
+    private String displayMessage() {
+        try {
+            return HEADER + calculateHeatIndex(temperature, humidity);
+        } catch (NullPointerException e) {
             throw new NoDataAvailableException();
         }
-        return String.format(HEADER, temperature, humidity);
+    }
+
+    private String calculateHeatIndex(Double temperature, Double humidity) {
+        return String.valueOf(temperature + humidity );
     }
 
     @Override

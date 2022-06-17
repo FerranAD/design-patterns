@@ -1,15 +1,13 @@
 package weather;
 
-import vo.MeasurementVo;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherData implements Subject {
     private final List<Observer> observers;
-    private MeasurementVo temperature;
-    private MeasurementVo humidity;
-    private MeasurementVo pressure;
+    private Double temperature;
+    private Double humidity;
+    private Double pressure;
 
     public WeatherData() {
         observers = new ArrayList<>();
@@ -27,26 +25,29 @@ public class WeatherData implements Subject {
 
     @Override
     public void notifyObservers() {
-        var mesurements = getMesurements();
-        observers.forEach( observer -> observer.update(mesurements));
+        observers.forEach(Observer::update);
     }
 
-    public void setMeasurements(MeasurementVo temperature, MeasurementVo humidity, MeasurementVo pressure) {
+    public void setMeasurements(Double temperature, Double humidity, Double pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+        measurementsChaged();
+    }
+
+    public Double getTemperature() {
+        return temperature;
+    }
+
+    public Double getHumidity() {
+        return humidity;
+    }
+
+    public Double getPressure() {
+        return pressure;
+    }
+
+    public void measurementsChaged() {
         notifyObservers();
-    }
-
-    public List<MeasurementVo> getMesurements() {
-        return getMesurementsList();
-    }
-
-    private List<MeasurementVo> getMesurementsList() {
-        try {
-            return List.of(temperature, humidity, pressure);
-        } catch (NullPointerException e) {
-            return List.of();
-        }
     }
 }
