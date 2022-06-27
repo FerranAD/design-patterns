@@ -1,4 +1,4 @@
-package factory.pizzas;
+package factory.simplefactory.pizza;
 
 public class ClamPizza extends Pizza {
     @Override

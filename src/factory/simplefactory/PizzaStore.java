@@ -1,12 +1,11 @@
 package factory.simplefactory;
 
-import factory.pizzas.Pizza;
-import factory.simplefactory.SimplePizzaFactory;
+import factory.simplefactory.pizza.Pizza;
 
-public class SimplePizzaStore {
+public class PizzaStore {
     SimplePizzaFactory factory;
 
-    public SimplePizzaStore(SimplePizzaFactory factory) {
+    public PizzaStore(SimplePizzaFactory factory) {
         this.factory = factory;
     }
 

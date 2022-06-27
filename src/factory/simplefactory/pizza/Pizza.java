@@ -1,4 +1,4 @@
-package factory.pizzas;
+package factory.simplefactory.pizza;
 
 public abstract class Pizza {
     public abstract void prepare();
