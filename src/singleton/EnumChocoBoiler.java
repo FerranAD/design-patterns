@@ -1,5 +1,7 @@
 package singleton;
 
+// Benefit: Thread-safe, lazy initialization, no need to synchronize, easy to use.
+// Drawback: Coding constraints, more freedom is given in other implementations.
 public enum EnumChocoBoiler {
     INSTANCE;
 
