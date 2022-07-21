@@ -1,5 +1,7 @@
 package iterator;
 
+import java.util.Iterator;
+
 public class DinerMenuIterator implements Iterator {
     private MenuItem[] items;
     private int position = 0;
@@ -20,5 +22,9 @@ public class DinerMenuIterator implements Iterator {
         } else {
             return true;
         }
+    }
+
+    public void remove() {
+        throw new UnsupportedOperationException("You can't remove an item from a DinerMenu");
     }
 }
