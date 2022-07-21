@@ -1,7 +1,3 @@
 package iterator;
 
-import java.util.Iterator;
-
-public interface Menu {
-    public Iterator createIterator();
-}
+public interface Menu extends Iterable<MenuItem> {}

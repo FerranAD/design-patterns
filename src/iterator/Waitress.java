@@ -1,7 +1,5 @@
 package iterator;
 
-import java.util.Iterator;
-
 public class Waitress {
     Menu pancakeHouseMenu;
     Menu dinerMenu;
@@ -12,18 +10,14 @@ public class Waitress {
     }
 
     public void printMenu() {
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
-
         System.out.println("MENU\n----\nBREAKFAST");
-        printMenu(pancakeIterator);
+        printMenu(pancakeHouseMenu);
         System.out.println("\nLUNCH");
-        printMenu(dinerIterator);
+        printMenu(dinerMenu);
     }
 
-    private void printMenu(Iterator iterator) {
-        while (iterator.hasNext()) {
-            MenuItem menuItem = (MenuItem) iterator.next();
+    private void printMenu(Menu menu) {
+        for (MenuItem menuItem : menu) {
             System.out.print(menuItem.getName() + ", ");
             System.out.print(menuItem.getPrice() + " -- ");
             System.out.println(menuItem.getDescription());
