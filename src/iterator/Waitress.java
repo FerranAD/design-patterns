@@ -3,10 +3,12 @@ package iterator;
 public class Waitress {
     Menu pancakeHouseMenu;
     Menu dinerMenu;
+    Menu cafeMenu;
 
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
+        this.cafeMenu = cafeMenu;
     }
 
     public void printMenu() {
@@ -14,6 +16,8 @@ public class Waitress {
         printMenu(pancakeHouseMenu);
         System.out.println("\nLUNCH");
         printMenu(dinerMenu);
+        System.out.println("\nDINNER");
+        printMenu(cafeMenu);
     }
 
     private void printMenu(Menu menu) {
