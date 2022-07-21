@@ -1,5 +1,7 @@
 package composite;
 
+// This pattern lets us treat any element of the data structure uniformly.
+// It's transparnt wether the element is a leaf or a composite.
 public abstract class MenuComponent {
     public void add(MenuComponent menuComponent) {
         throw new UnsupportedOperationException("You can't add to a MenuComponent");
