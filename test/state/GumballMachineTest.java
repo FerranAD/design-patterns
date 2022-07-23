@@ -33,4 +33,12 @@ class GumballMachineTest {
         gumballMachine.turnCrank();
         gumballMachine.turnCrank();
     }
+
+    @Test
+    void refillTest() {
+        GumballMachine almostEmptyGumballMachine = new GumballMachine(1);
+        almostEmptyGumballMachine.insertQuarter();
+        almostEmptyGumballMachine.turnCrank();
+        almostEmptyGumballMachine.refill(2);
+    }
 }

@@ -33,7 +33,14 @@ public class GumballMachine {
     }
 
     public void turnCrank() {
-        state.turnCrank();
+        try {
+            state.turnCrank();
+            state.dispense();
+        } catch (NoCoinInsertedException ignored) { }
+    }
+
+    public void refill(int amount) {
+        state.refill(amount);
     }
 
     public void setState(State state) {
@@ -44,6 +51,10 @@ public class GumballMachine {
         System.out.println("A gumball comes rolling out the slot...");
         if (count != 0)
             count = count - 1;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public int getCount() {
