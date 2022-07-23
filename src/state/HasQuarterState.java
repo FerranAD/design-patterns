@@ -24,6 +24,11 @@ public class HasQuarterState implements State {
         } else {
             gumballMachine.setState(gumballMachine.getSoldState());
         }
+        callDispense(gumballMachine.getState());
+    }
+
+    private void callDispense(State state) {
+        state.dispense();
     }
 
     public void dispense() {

@@ -26,4 +26,11 @@ class GumballMachineTest {
     void dispenseIsNotUnnecessarilyCalled() {
         gumballMachine.turnCrank();
     }
+
+    @Test
+    void normalFunctioningCaseTest() {
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.turnCrank();
+    }
 }
