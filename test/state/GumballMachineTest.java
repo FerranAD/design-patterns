@@ -15,11 +15,15 @@ class GumballMachineTest {
     }
 
     @Test
-    void gumballMachineTest() {
+    void gumballMachineQuarterGivenBackTest() {
         gumballMachine.insertQuarter();
         gumballMachine.ejectQuarter();
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
+    }
+
+    @Test
+    void dispenseIsNotUnnecessarilyCalled() {
         gumballMachine.turnCrank();
     }
 }
