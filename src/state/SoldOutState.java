@@ -23,5 +23,6 @@ public class SoldOutState implements State {
     public void refill(int amount) {
         gumballMachine.setCount(amount);
         System.out.println("Gumballs refilled");
+        gumballMachine.setState(gumballMachine.getNoQuarterState());
     }
 }
