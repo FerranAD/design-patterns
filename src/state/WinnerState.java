@@ -23,4 +23,9 @@ public class WinnerState implements State {
             dispenseOneGumball(gumballMachine);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Winner";
+    }
 }

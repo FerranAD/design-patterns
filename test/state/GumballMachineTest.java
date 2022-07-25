@@ -11,7 +11,7 @@ class GumballMachineTest {
 
     @BeforeEach
     void setUp() {
-        gumballMachine = new GumballMachine(5);
+        gumballMachine = new GumballMachine(5, "Lleida");
     }
 
     @Test
@@ -36,7 +36,7 @@ class GumballMachineTest {
 
     @Test
     void refillTest() {
-        GumballMachine almostEmptyGumballMachine = new GumballMachine(1);
+        GumballMachine almostEmptyGumballMachine = new GumballMachine(1, "Lleida");
         almostEmptyGumballMachine.insertQuarter();
         almostEmptyGumballMachine.turnCrank();
         almostEmptyGumballMachine.refill(2);

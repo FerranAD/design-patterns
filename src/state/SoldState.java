@@ -19,4 +19,9 @@ public class SoldState implements State {
     public void dispense() {
         dispenseOneGumball(gumballMachine);
     }
+
+    @Override
+    public String toString() {
+        return "Sold";
+    }
 }
