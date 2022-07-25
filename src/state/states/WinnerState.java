@@ -1,9 +1,11 @@
-package state;
+package state.states;
 
-public class SoldState implements State {
+import state.GumballMachine;
+
+public class WinnerState implements State {
     GumballMachine gumballMachine;
     
-    public SoldState(GumballMachine gumballMachine) {
+    public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
     
@@ -17,11 +19,15 @@ public class SoldState implements State {
     }
     
     public void dispense() {
-        dispenseOneGumball(gumballMachine);
+        gumballMachine.releaseBall();
+        if (gumballMachine.getCount() > 0) {
+            System.out.println("You are a winner! You get two gumballs for your quarter");
+            dispenseOneGumball(gumballMachine);
+        }
     }
 
     @Override
     public String toString() {
-        return "Sold";
+        return "Winner";
     }
 }

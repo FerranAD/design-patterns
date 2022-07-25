@@ -1,5 +1,7 @@
 package state;
 
+import state.states.*;
+
 public class GumballMachine {
     private final String location;
     private final State soldOutState;

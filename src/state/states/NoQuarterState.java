@@ -1,4 +1,6 @@
-package state;
+package state.states;
+
+import state.GumballMachine;
 
 public class NoQuarterState implements State {
     GumballMachine gumballMachine;

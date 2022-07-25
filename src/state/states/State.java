@@ -1,4 +1,7 @@
-package state;
+package state.states;
+
+import state.GumballMachine;
+import state.NoCoinInsertedException;
 
 public interface State {
     void insertQuarter();
