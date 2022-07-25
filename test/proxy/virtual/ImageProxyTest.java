@@ -1,4 +1,4 @@
-package virtualproxy;
+package proxy.virtual;
 
 import java.net.*;
 import javax.swing.*;

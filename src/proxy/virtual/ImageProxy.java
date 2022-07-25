@@ -1,8 +1,8 @@
-package virtualproxy;
+package proxy.virtual;
 
-import virtualproxy.states.ImageNotRetrievedState;
-import virtualproxy.states.ImageRetrievedState;
-import virtualproxy.states.State;
+import proxy.virtual.states.ImageNotRetrievedState;
+import proxy.virtual.states.ImageRetrievedState;
+import proxy.virtual.states.State;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,6 @@
-package virtualproxy.states;
+package proxy.virtual.states;
 
-import virtualproxy.ImageProxy;
+import proxy.virtual.ImageProxy;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package virtualproxy.states;
+package proxy.virtual.states;
 
 import java.awt.*;
 

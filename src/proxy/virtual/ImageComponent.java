@@ -1,9 +1,9 @@
-package virtualproxy;
+package proxy.virtual;
 
 import javax.swing.*;
 import java.awt.*;
 
-class ImageComponent extends JComponent {
+public class ImageComponent extends JComponent {
 	private static final long serialVersionUID = 1L;
 	private Icon icon;
 
