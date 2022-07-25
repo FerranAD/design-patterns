@@ -1,54 +1,49 @@
 package virtualproxy;
 
+import virtualproxy.states.ImageNotRetrievedState;
+import virtualproxy.states.ImageRetrievedState;
+import virtualproxy.states.State;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
 public class ImageProxy implements Icon {
-    private volatile ImageIcon imageIcon;
-    private final URL imageUrl;
-    private Thread retrievalThread;
-    private boolean retrieving = false;
+    public volatile ImageIcon imageIcon;
+
+    public final URL imageUrl;
+    private State state;
 
     public ImageProxy(URL imageUrl) {
         this.imageUrl = imageUrl;
+        state = new ImageNotRetrievedState(this);
     }
 
     public int getIconWidth() {
-        if (imageIcon != null) {
-            return imageIcon.getIconWidth();
-        }
-        return -1;
+        return state.getIconWidth();
     }
 
     public int getIconHeight() {
-        if (imageIcon != null) {
-            return imageIcon.getIconHeight();
-        }
-        return -1;
+        return state.getIconHeight();
     }
 
-    synchronized void setImageIcon(ImageIcon imageIcon) {
+    synchronized public void setImageIcon(ImageIcon imageIcon) {
         this.imageIcon = imageIcon;
     }
 
     public void paintIcon(final Component c, Graphics g, int x, int y) {
-        if (imageIcon != null)
-            imageIcon.paintIcon(c, g, x, y);
-        else {
-            g.drawString("Loading...", x + 100, y + 100);
-            if (!retrieving) {
-                retrieving = true;
-                retrievalThread = new Thread(() -> {
-                    try {
-                        setImageIcon(new ImageIcon(imageUrl, "Album cover"));
-                        c.repaint();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-                retrievalThread.start();
-            }
-        }
+        state.paintIcon(c, g, x, y);
+    }
+
+    public State getImageNotRetrievedState() {
+        return new ImageNotRetrievedState(this);
+    }
+
+    public State getImageRetrievedState() {
+        return new ImageRetrievedState(this);
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 }
