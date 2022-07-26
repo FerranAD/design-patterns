@@ -1,6 +1,6 @@
 package compoundpatterns.factory.ducks;
 
-import compoundpatterns.QuackCounter;
+import compoundpatterns.ducks.QuackCounter;
 import compoundpatterns.ducks.*;
 
 public class CountingDucksFactory extends AbstractDuckFactory {

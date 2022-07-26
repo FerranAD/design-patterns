@@ -1,5 +1,7 @@
 package compoundpatterns.ducks;
 
-public interface Quackable {
+import compoundpatterns.observer.QuackObservable;
+
+public interface Quackable extends QuackObservable {
     void quack();
 }

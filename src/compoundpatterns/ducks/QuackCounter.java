@@ -1,6 +1,6 @@
-package compoundpatterns;
+package compoundpatterns.ducks;
 
-import compoundpatterns.ducks.Quackable;
+import compoundpatterns.observer.Observer;
 
 public class QuackCounter implements Quackable {
     private final Quackable quacker;
@@ -20,5 +20,15 @@ public class QuackCounter implements Quackable {
 
     public static int getQuacks() {
         return QuackCounter.quacks;
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        quacker.registerObserver(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        quacker.notifyObservers();
     }
 }
