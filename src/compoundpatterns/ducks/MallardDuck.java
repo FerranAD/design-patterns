@@ -3,7 +3,7 @@ package compoundpatterns.ducks;
 import compoundpatterns.observer.Observable;
 import compoundpatterns.observer.Observer;
 
-public class MallardDuck implements Quackable{
+public class MallardDuck implements Quackable {
     private final Observable observable;
 
     public MallardDuck () {
@@ -24,5 +24,10 @@ public class MallardDuck implements Quackable{
     @Override
     public void notifyObservers() {
         observable.notifyObservers();
+    }
+
+    @Override
+    public String toString() {
+        return "MallardDuck";
     }
 }

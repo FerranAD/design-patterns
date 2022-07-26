@@ -3,6 +3,7 @@ package compoundpatterns;
 import compoundpatterns.ducks.*;
 import compoundpatterns.factory.ducks.AbstractDuckFactory;
 import compoundpatterns.factory.geese.AbstractGooseFactory;
+import compoundpatterns.observer.Quackologist;
 
 public class DuckSimulator {
     public void simulate(AbstractDuckFactory duckFactory, AbstractGooseFactory gooseFactory) {
@@ -30,11 +31,11 @@ public class DuckSimulator {
 
         flockOfDucks.add(flockOfMallards);
 
+        Quackologist quackologist = new Quackologist();
+        flockOfDucks.registerObserver(quackologist);
+
         System.out.println("\nWhole flock simulation");
         simulate(flockOfDucks);
-
-        System.out.println("\nMallard Flock simulation");
-        simulate(flockOfMallards);
 
         System.out.println("\nThe ducks quacked " + QuackCounter.getQuacks() + " times");
     }
