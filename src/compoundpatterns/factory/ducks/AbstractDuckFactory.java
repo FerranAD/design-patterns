@@ -1,4 +1,4 @@
-package compoundpatterns.factory;
+package compoundpatterns.factory.ducks;
 
 import compoundpatterns.ducks.Quackable;
 
