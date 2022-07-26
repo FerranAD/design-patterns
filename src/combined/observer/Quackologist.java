@@ -1,4 +1,4 @@
-package compoundpatterns.observer;
+package combined.observer;
 
 public class Quackologist implements Observer {
     @Override

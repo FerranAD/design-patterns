@@ -1,18 +1,18 @@
-package compoundpatterns.ducks;
+package combined.ducks;
 
-import compoundpatterns.observer.Observable;
-import compoundpatterns.observer.Observer;
+import combined.observer.Observable;
+import combined.observer.Observer;
 
-public class MallardDuck implements Quackable {
+public class DuckCall implements Quackable {
     private final Observable observable;
 
-    public MallardDuck () {
+    public DuckCall() {
         observable = new Observable(this);
     }
 
     @Override
     public void quack() {
-        System.out.println("Quack");
+        System.out.println("Kwak");
         notifyObservers();
     }
 
@@ -28,6 +28,6 @@ public class MallardDuck implements Quackable {
 
     @Override
     public String toString() {
-        return "MallardDuck";
+        return "Duck call";
     }
 }

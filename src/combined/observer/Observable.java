@@ -1,4 +1,4 @@
-package compoundpatterns.observer;
+package combined.observer;
 
 import java.util.ArrayList;
 import java.util.List;

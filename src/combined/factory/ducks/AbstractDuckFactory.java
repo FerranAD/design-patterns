@@ -1,6 +1,6 @@
-package compoundpatterns.factory.ducks;
+package combined.factory.ducks;
 
-import compoundpatterns.ducks.Quackable;
+import combined.ducks.Quackable;
 
 public abstract class AbstractDuckFactory {
     public abstract Quackable createMallardDuck();

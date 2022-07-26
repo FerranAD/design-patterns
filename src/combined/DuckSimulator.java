@@ -1,9 +1,9 @@
-package compoundpatterns;
+package combined;
 
-import compoundpatterns.ducks.*;
-import compoundpatterns.factory.ducks.AbstractDuckFactory;
-import compoundpatterns.factory.geese.AbstractGooseFactory;
-import compoundpatterns.observer.Quackologist;
+import combined.ducks.*;
+import combined.factory.ducks.AbstractDuckFactory;
+import combined.factory.geese.AbstractGooseFactory;
+import combined.observer.Quackologist;
 
 public class DuckSimulator {
     public void simulate(AbstractDuckFactory duckFactory, AbstractGooseFactory gooseFactory) {

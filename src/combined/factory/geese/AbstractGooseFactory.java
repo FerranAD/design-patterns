@@ -1,7 +1,7 @@
-package compoundpatterns.factory.geese;
+package combined.factory.geese;
 
-import compoundpatterns.ducks.Quackable;
-import compoundpatterns.geese.Goose;
+import combined.ducks.Quackable;
+import combined.geese.Goose;
 
 public abstract class AbstractGooseFactory {
     public abstract Goose createGoose();

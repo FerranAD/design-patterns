@@ -1,7 +1,7 @@
-package compoundpatterns.ducks;
+package combined.ducks;
 
-import compoundpatterns.observer.Observable;
-import compoundpatterns.observer.Observer;
+import combined.observer.Observable;
+import combined.observer.Observer;
 
 public class RubberDuck implements Quackable {
     private final Observable observable;

@@ -1,6 +1,6 @@
-package compoundpatterns.ducks;
+package combined.ducks;
 
-import compoundpatterns.observer.Observer;
+import combined.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;

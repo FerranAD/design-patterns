@@ -1,8 +1,8 @@
-package compoundpatterns.factory.geese;
+package combined.factory.geese;
 
-import compoundpatterns.ducks.Quackable;
-import compoundpatterns.geese.Goose;
-import compoundpatterns.geese.GooseAdapter;
+import combined.ducks.Quackable;
+import combined.geese.Goose;
+import combined.geese.GooseAdapter;
 
 public class GooseFactory extends AbstractGooseFactory {
     @Override

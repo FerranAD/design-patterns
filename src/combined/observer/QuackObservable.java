@@ -1,4 +1,4 @@
-package compoundpatterns.observer;
+package combined.observer;
 
 public interface QuackObservable {
     void registerObserver(Observer observer);

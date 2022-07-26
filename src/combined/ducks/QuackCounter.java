@@ -1,6 +1,6 @@
-package compoundpatterns.ducks;
+package combined.ducks;
 
-import compoundpatterns.observer.Observer;
+import combined.observer.Observer;
 
 public class QuackCounter implements Quackable {
     private final Quackable quacker;

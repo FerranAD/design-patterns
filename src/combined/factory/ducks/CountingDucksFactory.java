@@ -1,7 +1,7 @@
-package compoundpatterns.factory.ducks;
+package combined.factory.ducks;
 
-import compoundpatterns.ducks.QuackCounter;
-import compoundpatterns.ducks.*;
+import combined.ducks.QuackCounter;
+import combined.ducks.*;
 
 public class CountingDucksFactory extends AbstractDuckFactory {
     @Override

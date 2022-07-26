@@ -1,9 +1,9 @@
-package compoundpatterns;
+package combined;
 
-import compoundpatterns.factory.ducks.AbstractDuckFactory;
-import compoundpatterns.factory.ducks.CountingDucksFactory;
-import compoundpatterns.factory.geese.AbstractGooseFactory;
-import compoundpatterns.factory.geese.GooseFactory;
+import combined.factory.ducks.AbstractDuckFactory;
+import combined.factory.ducks.CountingDucksFactory;
+import combined.factory.geese.AbstractGooseFactory;
+import combined.factory.geese.GooseFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

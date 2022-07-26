@@ -1,6 +1,6 @@
-package compoundpatterns.factory.ducks;
+package combined.factory.ducks;
 
-import compoundpatterns.ducks.*;
+import combined.ducks.*;
 
 public class DuckFactory extends AbstractDuckFactory {
     @Override

@@ -1,19 +1,21 @@
-package compoundpatterns.ducks;
+package combined.geese;
 
-import compoundpatterns.observer.Observable;
-import compoundpatterns.observer.Observer;
+import combined.ducks.Quackable;
+import combined.observer.Observable;
+import combined.observer.Observer;
 
-public class RedheadDuck implements Quackable {
+public class GooseAdapter implements Quackable {
     private final Observable observable;
+    private final Goose goose;
 
-    public RedheadDuck() {
+    public GooseAdapter(Goose goose) {
+        this.goose = goose;
         observable = new Observable(this);
     }
 
     @Override
     public void quack() {
-        System.out.println("Quack");
-        notifyObservers();
+        goose.honk();
     }
 
     @Override
@@ -24,10 +26,5 @@ public class RedheadDuck implements Quackable {
     @Override
     public void notifyObservers() {
         observable.notifyObservers();
-    }
-
-    @Override
-    public String toString() {
-        return "RedheadDuck";
     }
 }

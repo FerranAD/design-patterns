@@ -1,4 +1,4 @@
-package compoundpatterns.geese;
+package combined.geese;
 
 public class Goose {
     public void honk() {
