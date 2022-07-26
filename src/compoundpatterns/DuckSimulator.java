@@ -1,15 +1,16 @@
 package compoundpatterns;
 
 import compoundpatterns.ducks.*;
+import compoundpatterns.factory.AbstractDuckFactory;
 import compoundpatterns.geese.Goose;
 import compoundpatterns.geese.GooseAdapter;
 
 public class DuckSimulator {
-    public void simulate() {
-        Quackable mallardDuck = new QuackCounter(new MallardDuck());
-        Quackable redheadDuck = new QuackCounter(new RedheadDuck());
-        Quackable duckCall = new QuackCounter(new DuckCall());
-        Quackable rubberDuck = new QuackCounter(new RubberDuck());
+    public void simulate(AbstractDuckFactory factory) {
+        Quackable mallardDuck = factory.createMallardDuck();
+        Quackable redheadDuck = factory.createRedheadDuck();
+        Quackable duckCall = factory.createDuckCall();
+        Quackable rubberDuck = factory.createRubberDuck();
         Quackable gooseDuck = new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator");
