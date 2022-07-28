@@ -1,4 +1,6 @@
-package singleton;
+package singleton.threadjobs;
+
+import singleton.EnumChocoBoiler;
 
 public class EnumSingletonTestThread implements Runnable {
 

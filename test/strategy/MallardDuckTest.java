@@ -1,8 +1,8 @@
 package strategy;
 
-import strategy.animals.Duck;
-import strategy.animals.MallardDuck;
-import strategy.animals.ModelDuck;
+import strategy.ducks.Duck;
+import strategy.ducks.MallardDuck;
+import strategy.ducks.ModelDuck;
 import strategy.behaviours.fly.FlyRocketPowered;
 import org.junit.jupiter.api.Test;
 

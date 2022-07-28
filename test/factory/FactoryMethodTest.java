@@ -1,11 +1,14 @@
-package factory.factorymethod.store;
+package factory;
 
 import factory.factorymethod.pizza.Pizza;
+import factory.factorymethod.store.ChicagoPizzaStore;
+import factory.factorymethod.store.NYPizzaStore;
+import factory.factorymethod.store.PizzaStore;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PizzaStoreTest {
+class FactoryMethodTest {
     PizzaStore pizzaStore;
 
     @Test

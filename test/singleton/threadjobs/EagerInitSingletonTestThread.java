@@ -1,4 +1,6 @@
-package singleton;
+package singleton.threadjobs;
+
+import singleton.EagerInitChocoBoiler;
 
 public class EagerInitSingletonTestThread implements Runnable {
 

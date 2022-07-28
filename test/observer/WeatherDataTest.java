@@ -1,8 +1,9 @@
-package observer.weather;
+package observer;
 
 import observer.displays.CurrentConditionDisplay;
 import observer.displays.HeatIndexDisplay;
 import observer.exceptions.NoDataAvailableException;
+import observer.weather.WeatherData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

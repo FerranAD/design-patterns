@@ -1,4 +1,6 @@
-package singleton;
+package singleton.threadjobs;
+
+import singleton.DoubleCheckedLockingChocoBoiler;
 
 public class DoubleCheckSingletonTestThread implements Runnable {
 

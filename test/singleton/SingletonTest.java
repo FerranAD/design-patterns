@@ -1,6 +1,10 @@
 package singleton;
 
 import org.junit.jupiter.api.Test;
+import singleton.threadjobs.DoubleCheckSingletonTestThread;
+import singleton.threadjobs.EagerInitSingletonTestThread;
+import singleton.threadjobs.EnumSingletonTestThread;
+import singleton.threadjobs.LazyInitSingletonTestThread;
 
 class SingletonTest {
 
