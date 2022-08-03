@@ -12,7 +12,7 @@ _Creational patterns provide object creation mechanisms that increase flexibilit
 
 ### Factory method
 
-The Factory Method Pattern defines an interface
+The Factory Method pattern defines an interface
 for creating an object, but lets subclasses decide which
 class to instantiate. Factory Method __lets a class defer
 instantiation to subclasses__.
@@ -22,6 +22,21 @@ instantiation to subclasses__.
 By replacing `new Product()` with a call to `createProduct()`, the (abstract) superclass can operate with the object to be created. Only when a subclass is instantiated, some kind of concrete product will be actually created.
 
 ### Abstract factory
+
+The Abstract Factory pattern provides an interface
+for creating families of related or dependent objects
+without specifying their concrete classes.
+
+<h2 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="100%" width="100%"/> </h2>
+
+Abstract factories are usually formed by a set of factory methods. By returning the abstract type of the concrete products, they decouple the client from concrete product implementations.
+
+### Singleton
+
+The Singleton pattern lets you ensure that a class has only one instance, while providing a global access point to this instance. We can achieve that just by making the class constructor private, and adding a static method to get the unique instance.
+
+Singletons can often lead to bad designs if used improperly, they are hard to test and can be problematic on multithreaded environments. So they really must be used only when needed (to access a database for example).
+
 
 ## Structural 🏗️
 
