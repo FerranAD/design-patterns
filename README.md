@@ -34,7 +34,7 @@ The Abstract Factory pattern provides an interface
 for __creating families of related or dependent objects__
 without specifying their concrete classes.
 
-<h5 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="60%" width="60%"/> </h5>
 
 Abstract factories are usually formed by a set of factory methods. By returning the abstract type of the concrete products, they decouple the client from concrete product implementations.
 
@@ -74,6 +74,18 @@ incompatible interfaces.
 <h5 align = center> <img align="center" src="/img/uml-adapter.png" height="50%" width="50%"/> </h5>
 
 Notice that Facade defines a new interface for existing objects, whereas Adapter tries to make the existing interface usable. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
+
+### Decorator (or wrapper)
+
+The Decorator Pattern attaches additional
+responsibilities to an object dynamically (at runtime).
+Decorators provide a flexible alternative to
+subclassing for extending functionality.
+
+<h5 align = center> <img align="center" src="/img/uml-decorator.png" height="50%" width="50%"/> </h5>
+
+
+The wrapper contains the same set of methods as the target and delegates to it all requests it receives. However, the wrapper may alter the result by **doing something either before or after it passes the request to the target.**
 
 ## Behavioral 🗣️
 
