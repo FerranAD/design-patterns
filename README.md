@@ -17,7 +17,7 @@ for creating an object, but lets subclasses decide which
 class to instantiate. Factory Method __lets a class defer
 instantiation to subclasses__.
 
-<h2 align = center> <img align="center" src="/img/uml-factory-method.png" height="100%" width="100%"/> </h2>
+<h2 align = center> <img align="center" src="/img/uml-factory-method.png" height="50%" width="50%"/> </h2>
 
 By replacing `new Product()` with a call to `createProduct()`, the (abstract) superclass can operate with the object to be created. Only when a subclass is instantiated, some kind of concrete product will be actually created.
 
@@ -27,7 +27,7 @@ The Abstract Factory pattern provides an interface
 for creating families of related or dependent objects
 without specifying their concrete classes.
 
-<h2 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="100%" width="100%"/> </h2>
+<h2 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="50%" width="50%"/> </h2>
 
 Abstract factories are usually formed by a set of factory methods. By returning the abstract type of the concrete products, they decouple the client from concrete product implementations.
 
