@@ -4,7 +4,7 @@
 
 Here's a collection of design patterns that I've implemented following the [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/9781492077992/) book. My goal for this repo is to have a brief pattern catalog that I can refer to when needed.
 
-Ilustrations are from the [Refactoring Guru](https://refactoring.guru/design-patterns/catalog)
+Ilustrations are from the [Refactoring Guru](https://refactoring.guru/design-patterns/catalog).
 
 ## Table of contents
 
@@ -48,7 +48,7 @@ Singletons __can often lead to bad designs__ if used improperly, they are hard t
 
 The Builder pattern lets you __construct complex objects step by step__. The pattern allows you to produce different types and representations of an object using the same construction code.
 
-<h5 align = center> <img align="center" src="/img/uml-builder.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-builder.png" height="40%" width="40%"/> </h5>
 
 It's also useful for avoiding giant constructors and creating complex objects.
 
@@ -71,7 +71,7 @@ into another interface the clients expect. It lets
 classes work together that couldn’t otherwise because of
 incompatible interfaces.
 
-<h5 align = center> <img align="center" src="/img/uml-adapter.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-adapter.png" height="60%" width="60%"/> </h5>
 
 Notice that Facade defines a new interface for existing objects, whereas Adapter tries to make the existing interface usable. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
 
