@@ -17,6 +17,10 @@ for creating an object, but lets subclasses decide which
 class to instantiate. Factory Method __lets a class defer
 instantiation to subclasses__.
 
+<h2 align = center> <img align="center" src="/img/uml-factory-method.png" height="100%" width="100%"/> </h2>
+
+By replacing `new Product()` with a call to `createProduct()`, the (abstract) superclass can operate with the object to be created. Only when a subclass is instantiated, some kind of concrete product will be actually created.
+
 ### Abstract factory
 
 ## Structural 🏗️
