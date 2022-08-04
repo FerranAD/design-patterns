@@ -117,7 +117,7 @@ in need of securing.
 
 ## Behavioral 🗣️
 
-_Behavioral patterns take care of effective communication and the assignment of responsibilities between objects._
+_Behavioral patterns take care of effective communication and assignment of responsibilities between objects._
 
 ### Template method
 
@@ -177,7 +177,7 @@ notified and updated automatically.
 The list of subscribers is compiled dynamically: objects can start or stop listening to notifications at runtime, depending on the desired behavior of your app.
 
 
-<h5 align = center> <img align="center" src="/img/uml-observer.png" height="47%" width="47%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-observer.png" height="60%" width="60%"/> </h5>
 
 
 ### State
@@ -186,6 +186,6 @@ The State pattern suggests that you create new classes for all possible states o
 
 Instead of implementing all behaviors on its own, the original object, called context, stores a reference to one of the state objects that represents its current state, and delegates all the state-related work to that object.
 
-<h5 align = center> <img align="center" src="/img/uml-state.png" height="47%" width="47%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-state.png" height="55%" width="55%"/> </h5>
 
 This structure may look similar to the Strategy pattern, but there’s one key difference. In the State pattern, the particular states may be aware of each other and initiate transitions from one state to another, whereas strategies almost never know about each other.
