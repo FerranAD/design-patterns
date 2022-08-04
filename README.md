@@ -8,9 +8,9 @@ Ilustrations are from the [Refactoring Guru](https://refactoring.guru/design-pat
 
 ## Table of contents
 
-- [Creational patterns](##Creational)
-- [Structural patterns](##Structural)
-- [Behavioral patterns](##Behavioral)
+- [Creational patterns](#creational-)
+- [Structural patterns](#structural-%EF%B8%8F)
+- [Behavioral patterns](#behavioral-%EF%B8%8F)
 
 
 ## Creational 🔨
