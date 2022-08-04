@@ -87,6 +87,34 @@ subclassing for extending functionality.
 
 The wrapper contains the same set of methods as the target and delegates to it all requests it receives. However, the wrapper may alter the result by **doing something either before or after it passes the request to the target.**
 
+### Composite
+
+The Composite Pattern allows you to
+compose objects into tree structures to
+represent **part-whole hierarchies**. Composite
+lets clients treat individual objects and
+compositions of objects uniformly.
+
+<h5 align = center> <img align="center" src="/img/uml-composite.png" height="50%" width="50%"/> </h5>
+
+### Proxy
+
+The Proxy Pattern provides a surrogate or
+placeholder for another object to **control access** to it.
+
+If you need to **execute something either before or after the primary logic of the class**, the proxy lets you do this without changing that class. Since the proxy implements the same interface as the original class, it can be passed to any client that expects a real service object.
+
+<h5 align = center> <img align="center" src="/img/uml-proxy.png" height="50%" width="50%"/> </h5>
+
+Use the Proxy
+Pattern to create a
+representative object
+that controls access
+to another object,
+which may be remote,
+expensive to create, or
+in need of securing.
+
 ## Behavioral 🗣️
 
 _Behavioral patterns take care of effective communication and the assignment of responsibilities between objects._
