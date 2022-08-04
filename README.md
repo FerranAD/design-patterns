@@ -123,7 +123,7 @@ _Behavioral patterns take care of effective communication and the assignment of 
 
 The Template Method pattern suggests that you **break down an algorithm** into a series of steps, turn these steps into methods, and put a series of calls to these **methods inside a single template method**. The steps may either be `abstract`, or have some default implementation. The algorithm is completed by subclassing and overriding some optional steps if needed (but not the template method itself).
 
-<h5 align = center> <img align="center" src="/img/uml-template-method.png" height="42%" width="42%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-template-method.png" height="55%" width="55%"/> </h5>
 
 **Hooks** can be very useful, they are methods that **give a point of extension of the algorithm**, but that are not needed for the algorithm to work. An example is the `onCreate()` method on *Android Activity*, which lets the client do something before
 (or after) an important step.
@@ -133,7 +133,7 @@ The Template Method pattern suggests that you **break down an algorithm** into a
 
 The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called an *iterator*.
 
-<h5 align = center> <img align="center" src="/img/uml-iterator.png" height="42%" width="42%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-iterator.png" height="44%" width="44%"/> </h5>
 
 This **makes the client code compatible with any collection type or any traversal algorithm** as long as there’s a proper iterator. If you need a special way to traverse a collection, you just create a new iterator class, without having to change the collection or the client.
 
@@ -143,6 +143,6 @@ The Strategy pattern suggests that you take a class that does something specific
 
 The original class, called context, must have a field for storing a reference to one of the strategies. The context **delegates the work to a linked strategy object which can be changed at runtime**, and also used by other contexts.
 
-<h5 align = center> <img align="center" src="/img/uml-strategy.png" height="42%" width="42%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-strategy.png" height="47%" width="47%"/> </h5>
 
 Remember that if you only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program. Also keep in mind that functional typing and **anonymous functions can provide the same results**, avoiding the need to bloat with new classes and interfaces.
