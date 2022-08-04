@@ -24,7 +24,7 @@ for creating an object, but lets subclasses decide which
 class to instantiate. Factory Method __lets a class defer
 instantiation to subclasses__.
 
-<h5 align = center> <img align="center" src="/img/uml-factory-method.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-factory-method.png" height="70%" width="70%"/> </h5>
 
 By replacing `new Product()` with a call to `createProduct()`, the (abstract) superclass can operate with the object to be created. Only when a subclass is instantiated, some kind of concrete product will be actually created.
 
@@ -34,7 +34,7 @@ The Abstract Factory pattern provides an interface
 for __creating families of related or dependent objects__
 without specifying their concrete classes.
 
-<h5 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="60%" width="60%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-abstract-factory.png" height="65%" width="65%"/> </h5>
 
 Abstract factories are usually formed by a set of factory methods. By returning the abstract type of the concrete products, they decouple the client from concrete product implementations.
 
@@ -48,7 +48,7 @@ Singletons __can often lead to bad designs__ if used improperly, they are hard t
 
 The Builder pattern lets you __construct complex objects step by step__. The pattern allows you to produce different types and representations of an object using the same construction code.
 
-<h5 align = center> <img align="center" src="/img/uml-builder.png" height="40%" width="40%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-builder.png" height="43%" width="43%"/> </h5>
 
 It's also useful for avoiding giant constructors and creating complex objects.
 
@@ -60,7 +60,7 @@ _Structural patterns explain how to assemble objects and classes into larger str
 
 By __defining a higher-level interface__, the Facade pattern provides easier access to a particular part of the subsystem’s functionality. It knows where to direct the client’s request. 
 
-<h5 align = center> <img align="center" src="/img/uml-facade.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-facade.png" height="53%" width="53%"/> </h5>
 
 **Avoid creating a god object**. If needed, additional facades can be made either to be used independently or to be composed with a higher-level facade (so the latter can maintain cohesiveness).
 
@@ -71,7 +71,7 @@ into another interface the clients expect. It lets
 classes work together that couldn’t otherwise because of
 incompatible interfaces.
 
-<h5 align = center> <img align="center" src="/img/uml-adapter.png" height="60%" width="60%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-adapter.png" height="83%" width="83%"/> </h5>
 
 Notice that Facade defines a new interface for existing objects, whereas Adapter tries to make the existing interface usable. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
 
@@ -82,7 +82,7 @@ responsibilities to an object dynamically (at runtime).
 Decorators provide a flexible alternative to
 subclassing for extending functionality.
 
-<h5 align = center> <img align="center" src="/img/uml-decorator.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-decorator.png" height="67%" width="67%"/> </h5>
 
 
 The wrapper contains the same set of methods as the target and delegates to it all requests it receives. However, the wrapper may alter the result by **doing something either before or after it passes the request to the target.**
@@ -95,7 +95,7 @@ represent **part-whole hierarchies**. Composite
 lets clients treat individual objects and
 compositions of objects uniformly.
 
-<h5 align = center> <img align="center" src="/img/uml-composite.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-composite.png" height="40%" width="40%"/> </h5>
 
 ### Proxy
 
@@ -104,7 +104,7 @@ placeholder for another object to **control access** to it.
 
 If you need to **execute something either before or after the primary logic of the class**, the proxy lets you do this without changing that class. Since the proxy implements the same interface as the original class, it can be passed to any client that expects a real service object.
 
-<h5 align = center> <img align="center" src="/img/uml-proxy.png" height="50%" width="50%"/> </h5>
+<h5 align = center> <img align="center" src="/img/uml-proxy.png" height="46%" width="46%"/> </h5>
 
 Use the Proxy
 Pattern to create a
