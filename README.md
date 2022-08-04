@@ -146,3 +146,46 @@ The original class, called context, must have a field for storing a reference to
 <h5 align = center> <img align="center" src="/img/uml-strategy.png" height="47%" width="47%"/> </h5>
 
 Remember that if you only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program. Also keep in mind that functional typing and **anonymous functions can provide the same results**, avoiding the need to bloat with new classes and interfaces.
+
+### Command
+
+Command is a behavioral design pattern that **turns a request into a stand-alone object that contains all information about the request**. This transformation lets you pass requests as method arguments, delay or queue a request’s execution, and support undoable operations.
+
+All the request details should be extracted, such as the object being called, the name of the method and the list of arguments, and moved into a separate command class with a single method that triggers this request.
+
+<h5 align = center> <img align="center" src="/img/uml-command.png" height="47%" width="47%"/> </h5>
+
+
+*Chain of Responsibility*, *Command*, *Mediator* and *Observer* address various ways of connecting senders and receivers of requests:
+
+  - Chain of Responsibility passes a request sequentially along a dynamic chain of potential receivers until one of them handles it.
+  
+  - Command establishes unidirectional connections between senders and receivers.
+  
+  - Mediator eliminates direct connections between senders and receivers, forcing them to communicate indirectly via a mediator object.
+  
+  - Observer lets receivers dynamically subscribe to and unsubscribe from receiving requests.
+
+
+### Observer
+
+The Observer Pattern defines a one-to-many
+dependency between objects so that when one
+object changes state, all of its dependents are
+notified and updated automatically.
+
+The list of subscribers is compiled dynamically: objects can start or stop listening to notifications at runtime, depending on the desired behavior of your app.
+
+
+<h5 align = center> <img align="center" src="/img/uml-observer.png" height="47%" width="47%"/> </h5>
+
+
+### State
+
+The State pattern suggests that you create new classes for all possible states of an object and extract all state-specific behaviors into these classes.
+
+Instead of implementing all behaviors on its own, the original object, called context, stores a reference to one of the state objects that represents its current state, and delegates all the state-related work to that object.
+
+<h5 align = center> <img align="center" src="/img/uml-state.png" height="47%" width="47%"/> </h5>
+
+This structure may look similar to the Strategy pattern, but there’s one key difference. In the State pattern, the particular states may be aware of each other and initiate transitions from one state to another, whereas strategies almost never know about each other.
